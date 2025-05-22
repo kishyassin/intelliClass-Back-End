@@ -98,7 +98,6 @@ Academic dishonesty is a growing challenge in the digital age, exacerbated by th
 
 - **Data Protection:** Compliance with Morocco’s Law 09-08 and CNDP regulations.
 - **Transparency:** Clear consent for monitoring and data use.
-- **Ethical AI Use:** AI assists but does not replace human judgment.
 
 ---
 
@@ -112,5 +111,6 @@ Academic dishonesty is a growing challenge in the digital age, exacerbated by th
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/IntelliClass.git
-   cd IntelliClass
+   git clone [https://github.com/your-repo/IntelliClass](https://github.com/kishyassin/intelliClass-Back-End/).git
+   cd IntelliClass-front-end
+License of use: https://www.termsfeed.com/live/29d0c1ad-e5b8-448b-8485-7c4a183f15ca 
