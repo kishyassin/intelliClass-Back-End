@@ -82,3 +82,28 @@ func CompareResponse(question,text1, text2 string) (int, error) {
 
 	return score, nil
 }
+
+// func Get Student classes
+func GetStudentClasses(studentID string) ([]interface{}, error) {
+	if studentID == "" {
+		return nil, fmt.Errorf("studentID is empty")
+	}
+
+	// Prepare the command to call the Python microservice
+	cmd := exec.Command("python", "microservice/get_student_classes.py", studentID)
+
+	// Capture the output
+	output, err := cmd.Output()
+	if err != nil {
+		return nil, fmt.Errorf("failed to execute python microservice: %v", err)
+	}
+
+	// Parse the output as a list of classes
+	var classes []Class
+	err = json.Unmarshal(output, &classes)
+	if err != nil {
+		return nil, fmt.Errorf("failed to parse classes from output: %v", err)
+	}
+
+	return classes, nil
+}
